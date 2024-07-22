@@ -5,10 +5,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from seleniumwire import webdriver
 import json
 import requests
+import configparser
 
-fluviuslogin = "yourlogin@youremail.com"
-fluviuspassword = "yourfluviuspassword"
-fluviusEAN = "the EAN you want to request the usage for" # example: 5414488200441000000
+config = configparser.ConfigParser()
+onfig.read('config.ini')
+
+fluviuslogin = config.get("fluvius","login")
+fluviuspassword = config.get("fluvius","password")
+fluviusEAN = config.get("fluvius","EAN")
 
 # Initialize Chrome WebDriver with performance logging enabled
 chrome_options = webdriver.ChromeOptions()
