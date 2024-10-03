@@ -1,0 +1,7 @@
+[fluvius]
+fluviuslogin = 
+fluviuspassword = 
+fluviusEAN = 
+
+[browser]
+kind = edge
